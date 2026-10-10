@@ -1,6 +1,6 @@
 package com.julihyrostudio.hyroframepower;
 
-import com.julihyrostudio.hyroframepower.Item.ModRegistry;
+import com.julihyrostudio.hyroframepower.Core.Registry.ModRegistry;
 import com.julihyrostudio.hyroframepower.Tab.CreativeTabControl;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.NeoForge;
