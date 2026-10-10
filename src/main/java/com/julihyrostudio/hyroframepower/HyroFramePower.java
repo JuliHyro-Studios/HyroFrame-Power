@@ -1,5 +1,7 @@
 package com.julihyrostudio.hyroframepower;
 
+import com.julihyrostudio.hyroframepower.Item.ModItems;
+import com.julihyrostudio.hyroframepower.Tab.CreativeTabControl;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
@@ -12,13 +14,11 @@ import com.julihyrostudio.hyroframepower.ModMeta.Meta;
 
 @Mod(Meta.MODID)
 public class HyroFramePower {
-    public static final String MODID = Meta.MODID;
-    public static final Logger LOGGER = LogUtils.getLogger();
-
     public HyroFramePower(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
+        ModItems.Register(modEventBus);
+        CreativeTabControl.Register(modEventBus);
     }
-
     @SubscribeEvent
     public void onServerTick(ServerTickEvent.Post event) {
     }
