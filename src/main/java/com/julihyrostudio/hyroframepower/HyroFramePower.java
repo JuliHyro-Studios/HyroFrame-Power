@@ -1,9 +1,7 @@
 package com.julihyrostudio.hyroframepower;
 
-import com.julihyrostudio.hyroframepower.Item.ModItems;
+import com.julihyrostudio.hyroframepower.Item.ModRegistry;
 import com.julihyrostudio.hyroframepower.Tab.CreativeTabControl;
-import org.slf4j.Logger;
-import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.fml.common.Mod;
@@ -16,7 +14,8 @@ import com.julihyrostudio.hyroframepower.ModMeta.Meta;
 public class HyroFramePower {
     public HyroFramePower(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
-        ModItems.Register(modEventBus);
+        ModRegistry.ItemRegister(modEventBus);
+        ModRegistry.BlockRegister(modEventBus);
         CreativeTabControl.Register(modEventBus);
     }
     @SubscribeEvent

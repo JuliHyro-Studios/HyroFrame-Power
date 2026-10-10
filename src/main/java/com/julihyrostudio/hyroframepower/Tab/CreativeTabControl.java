@@ -1,6 +1,6 @@
 package com.julihyrostudio.hyroframepower.Tab;
 
-import com.julihyrostudio.hyroframepower.Item.ModItems;
+import com.julihyrostudio.hyroframepower.Item.ModRegistry;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -14,7 +14,7 @@ public class CreativeTabControl {
     public void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
-            event.accept(ModItems.BISMUTH);
+            event.accept(ModRegistry.BISMUTH);
         }
     }
 }

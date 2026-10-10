@@ -6,7 +6,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class ModItems {
+public class ModRegistry {
     public static final DeferredRegister.Items ITEMS =
             DeferredRegister.createItems(Meta.MODID);
 
@@ -15,9 +15,10 @@ public class ModItems {
 
     public static final DeferredItem<Item> BISMUTH =
             ITEMS.register("bismuth", () -> new Item(new Item.Properties()));
-
-    public static void Register(IEventBus bus) {
+    public static void BlockRegister(IEventBus modEventBus) {
+        BLOCKS.register(modEventBus);
+    }
+    public static void ItemRegister(IEventBus bus) {
         ITEMS.register(bus);
-        BLOCKS.register(bus);
     }
 }
