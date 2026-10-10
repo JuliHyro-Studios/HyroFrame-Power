@@ -11,9 +11,10 @@ import static com.julihyrostudio.hyroframepower.Core.Registry.ModRegistry.ITEMS;
 import static com.julihyrostudio.hyroframepower.Core.Registry.ModRegistry.RegisterBlock;
 
 public class RegistryMeta {
+    public static void init() {}
     // Define a Item
     public static final DeferredItem<Item> BISMUTH =
             ITEMS.register("bismuth", () -> new Item(new Item.Properties()));
     // Define a block
-    public static final DeferredBlock<Block> BISMUTH_BLOCK = RegisterBlock("bissmuth_bock", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final DeferredBlock<Block> BISMUTH_BLOCK = RegisterBlock("bismuth_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 }

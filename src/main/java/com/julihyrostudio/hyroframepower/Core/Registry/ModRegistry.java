@@ -1,5 +1,6 @@
 package com.julihyrostudio.hyroframepower.Core.Registry;
 
+import com.julihyrostudio.hyroframepower.Core.DTO.RegistryMeta;
 import com.julihyrostudio.hyroframepower.ModMeta.Meta;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -29,10 +30,12 @@ public class ModRegistry {
     }
     // Registration function for the Block
     public static void BlockRegister(IEventBus modEventBus) {
+        RegistryMeta.init();
         BLOCKS.register(modEventBus);
     }
     // Registration function for the Item
     public static void ItemRegister(IEventBus bus) {
+        RegistryMeta.init();
         ITEMS.register(bus);
     }
 }

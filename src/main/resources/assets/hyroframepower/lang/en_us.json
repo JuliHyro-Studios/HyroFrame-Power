@@ -1,3 +1,6 @@
 {
-  "item.hyroframepower.bismuth": "Bismuth"
+  "item.hyroframepower.bismuth": "Bismuth",
+  "block.hyroframepower.bismuth_block": "Block of Bismuth",
+  "creativetab.hyroframepower.ingredients_tab": "HyroFrame Power! Ingredients"
+
 }
