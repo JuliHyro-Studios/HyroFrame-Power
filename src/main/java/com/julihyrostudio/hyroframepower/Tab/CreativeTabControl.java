@@ -16,5 +16,9 @@ public class CreativeTabControl {
         {
             event.accept(RegistryMeta.BISMUTH);
         }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(RegistryMeta.BISMUTH_BLOCK);
+        }
     }
 }

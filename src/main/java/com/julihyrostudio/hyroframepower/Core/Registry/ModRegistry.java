@@ -17,7 +17,7 @@ public class ModRegistry {
 
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(Meta.MODID);
-    private static <T extends  Block> DeferredBlock<T> RegisterBlock(String name, Supplier<T> block)
+    public static <T extends  Block> DeferredBlock<T> RegisterBlock(String name, Supplier<T> block)
     {
         DeferredBlock<T> ToReturn = BLOCKS.register(name, block);
         RegisterBlockItem(name, ToReturn);
